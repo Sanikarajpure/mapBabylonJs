@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, {
-  Marker,
   NavigationControl,
   FullscreenControl,
   GeolocateControl,
@@ -15,7 +14,6 @@ const Mapbox = () => {
   const [cuboid, setCuboid] = useState(false);
   const [imgUrl, setImgUrl] = useState(null);
   const mapRef = useRef(null);
-  const key = `pk.eyJ1Ijoic2FuaWthcmFqcHVyZSIsImEiOiJjbGZjajY0aXQydWplNDFvMTl0aWZ4ZXA3In0.Ler5fYlCe0AJM1S7hfeWcQ`;
 
   const getImg = () => {
     var png = mapRef.current.getCanvas().toDataURL();
@@ -39,7 +37,7 @@ const Mapbox = () => {
             <div>
               <Map
                 ref={mapRef}
-                mapboxAccessToken={key}
+                mapboxAccessToken={process.env.REACT_APP_MAPBOX_SECRET}
                 style={{
                   width: "80vw",
                   height: "60vh",
