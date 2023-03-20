@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+ 
 }
 
 .App-logo {
@@ -35,4 +36,51 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.mapContainer{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.convertBtn{
+  margin:2rem;
+  height:35px;
+  width:180px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #9ddbf2;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.convertBtn:hover {
+  background-color: #75CFF0;
+  box-shadow: 0px 15px 20px rgba(133, 188, 235, 0.4);
+  color: #fff;
+  
+}
+
+.cuboidContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+padding-top:12px;
 }
